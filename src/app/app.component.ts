@@ -1,5 +1,10 @@
 import { Component, VERSION } from '@angular/core';
 import { LookupTableService } from './lookup-table.service';
+/**
+ * 1. aicoach treshold service
+ * 2. aicoach keypoints
+ * 3.
+ */
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -34,5 +39,7 @@ export class AppComponent {
 
   ngOnInit() {
     console.log(this.lookuptableService.getLookupTable());
+
+    this.lookuptableService.compareKeypointsToTreshold();
   }
 }
